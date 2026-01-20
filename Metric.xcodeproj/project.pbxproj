@@ -1,0 +1,624 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A1000001001A00010000 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1000001001A00009999 /* main.m */; };
+		A1000001001A00010001 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1000001001A00010002 /* AppDelegate.m */; };
+		A1000001001A00010003 /* Rule.m in Sources */ = {isa = PBXBuildFile; fileRef = A1000001001A00010004 /* Rule.m */; };
+		A1000001001A00010005 /* RuleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A1000001001A00010006 /* RuleManager.m */; };
+		A1000001001A00010007 /* IPAddressHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A1000001001A00010008 /* IPAddressHelper.m */; };
+		A1000001001A00010009 /* NetworkInterfaceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A100000100100010 /* NetworkInterfaceManager.m */; };
+		A1000001001A00010011 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1000001001A00010012 /* MainWindowController.m */; };
+		A1000001001A00010013 /* RuleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1000001001A00010014 /* RuleTableViewController.m */; };
+		A1000001001A00010015 /* AddRuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1000001001A00010016 /* AddRuleViewController.m */; };
+		A1000001001A00010017 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1000001001A00010018 /* Main.storyboard */; };
+		A1000001001A00010019 /* AddRuleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A100000100100020 /* AddRuleViewController.xib */; };
+		A1000001001A00010021 /* RuleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A1000001001A00010022 /* RuleModel.m */; };
+		A1000001001A00010100 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1000001001A00010099 /* Assets.xcassets */; };
+		A2000002002A00020001 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2000002002A00020002 /* main.m */; };
+		A2000002002A00020003 /* TransparentProxyProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = A2000002002A00020004 /* TransparentProxyProvider.m */; };
+		A2000002002A00020005 /* FlowHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A2000002002A00020006 /* FlowHandler.m */; };
+		A2000002002A00020007 /* RuleEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = A2000002002A00020008 /* RuleEngine.m */; };
+		A2000002002A00020009 /* RuleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A1000001001A00010022 /* RuleModel.m */; };
+		A300000300300010 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A300000300300011 /* Network.framework */; };
+		A3000003003A00030001 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3000003003A00030002 /* Cocoa.framework */; };
+		A3000003003A00030003 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3000003003A00030004 /* NetworkExtension.framework */; };
+		A3000003003A00030005 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3000003003A00030006 /* SystemConfiguration.framework */; };
+		A3000003003A00030007 /* SystemExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3000003003A00030008 /* SystemExtensions.framework */; };
+		A3000003003A00030009 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3000003003A00030004 /* NetworkExtension.framework */; };
+		A4000004004A00040001 /* nz.owo.Metric.MetricExtension.systemextension in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = A5000005005A00050001 /* nz.owo.Metric.MetricExtension.systemextension */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BF8DF8B62F201B670058FAD5 /* Metric.icon in Resources */ = {isa = PBXBuildFile; fileRef = BF8DF8B52F201B670058FAD5 /* Metric.icon */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A6000006006A00060001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7000007007A00070001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5000005005A00050002;
+			remoteInfo = MetricExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A8000008008A00080001 /* Embed System Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(SYSTEM_EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				A4000004004A00040001 /* nz.owo.Metric.MetricExtension.systemextension in Embed System Extensions */,
+			);
+			name = "Embed System Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A100000100100010 /* NetworkInterfaceManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkInterfaceManager.m; sourceTree = "<group>"; };
+		A100000100100020 /* AddRuleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddRuleViewController.xib; sourceTree = "<group>"; };
+		A100000100100023 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A100000100100024 /* Rule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rule.h; sourceTree = "<group>"; };
+		A100000100100025 /* RuleManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuleManager.h; sourceTree = "<group>"; };
+		A100000100100026 /* IPAddressHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPAddressHelper.h; sourceTree = "<group>"; };
+		A100000100100027 /* NetworkInterfaceManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkInterfaceManager.h; sourceTree = "<group>"; };
+		A100000100100028 /* MainWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
+		A100000100100029 /* RuleTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuleTableViewController.h; sourceTree = "<group>"; };
+		A100000100100030 /* AddRuleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddRuleViewController.h; sourceTree = "<group>"; };
+		A100000100100031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A100000100100032 /* Metric.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Metric.entitlements; sourceTree = "<group>"; };
+		A100000100100033 /* RuleModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuleModel.h; sourceTree = "<group>"; };
+		A100000100100034 /* SharedConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedConstants.h; sourceTree = "<group>"; };
+		A1000001001A00009999 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A1000001001A00010002 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A1000001001A00010004 /* Rule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Rule.m; sourceTree = "<group>"; };
+		A1000001001A00010006 /* RuleManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuleManager.m; sourceTree = "<group>"; };
+		A1000001001A00010008 /* IPAddressHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPAddressHelper.m; sourceTree = "<group>"; };
+		A1000001001A00010012 /* MainWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
+		A1000001001A00010014 /* RuleTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuleTableViewController.m; sourceTree = "<group>"; };
+		A1000001001A00010016 /* AddRuleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddRuleViewController.m; sourceTree = "<group>"; };
+		A1000001001A00010018 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A1000001001A00010022 /* RuleModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuleModel.m; sourceTree = "<group>"; };
+		A1000001001A00010099 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A200000200200035 /* TransparentProxyProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransparentProxyProvider.h; sourceTree = "<group>"; };
+		A200000200200036 /* FlowHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlowHandler.h; sourceTree = "<group>"; };
+		A200000200200037 /* RuleEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuleEngine.h; sourceTree = "<group>"; };
+		A200000200200038 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A200000200200039 /* MetricExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MetricExtension.entitlements; sourceTree = "<group>"; };
+		A2000002002A00020002 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A2000002002A00020004 /* TransparentProxyProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransparentProxyProvider.m; sourceTree = "<group>"; };
+		A2000002002A00020006 /* FlowHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlowHandler.m; sourceTree = "<group>"; };
+		A2000002002A00020008 /* RuleEngine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuleEngine.m; sourceTree = "<group>"; };
+		A300000300300011 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
+		A3000003003A00030002 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		A3000003003A00030004 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		A3000003003A00030006 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A3000003003A00030008 /* SystemExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemExtensions.framework; path = System/Library/Frameworks/SystemExtensions.framework; sourceTree = SDKROOT; };
+		A5000005005A00050001 /* nz.owo.Metric.MetricExtension.systemextension */ = {isa = PBXFileReference; explicitFileType = "wrapper.system-extension"; includeInIndex = 0; path = nz.owo.Metric.MetricExtension.systemextension; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9000009009A00090001 /* Metric.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metric.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF8DF8B52F201B670058FAD5 /* Metric.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = Metric.icon; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA00000A00AA000A0001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3000003003A00030001 /* Cocoa.framework in Frameworks */,
+				A3000003003A00030003 /* NetworkExtension.framework in Frameworks */,
+				A3000003003A00030005 /* SystemConfiguration.framework in Frameworks */,
+				A3000003003A00030007 /* SystemExtensions.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA00000A00AA000A0002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3000003003A00030009 /* NetworkExtension.framework in Frameworks */,
+				A300000300300010 /* Network.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AB00000B00BB000B0001 = {
+			isa = PBXGroup;
+			children = (
+				AB00000B00BB000B0002 /* Metric */,
+				AB00000B00BB000B0003 /* MetricExtension */,
+				AB00000B00BB000B0004 /* Shared */,
+				AB00000B00BB000B0005 /* Frameworks */,
+				AB00000B00BB000B0006 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AB00000B00BB000B0002 /* Metric */ = {
+			isa = PBXGroup;
+			children = (
+				A1000001001A00009999 /* main.m */,
+				BF8DF8B52F201B670058FAD5 /* Metric.icon */,
+				A100000100100023 /* AppDelegate.h */,
+				A1000001001A00010002 /* AppDelegate.m */,
+				A100000100100024 /* Rule.h */,
+				A1000001001A00010004 /* Rule.m */,
+				A100000100100025 /* RuleManager.h */,
+				A1000001001A00010006 /* RuleManager.m */,
+				A100000100100026 /* IPAddressHelper.h */,
+				A1000001001A00010008 /* IPAddressHelper.m */,
+				A100000100100027 /* NetworkInterfaceManager.h */,
+				A100000100100010 /* NetworkInterfaceManager.m */,
+				A100000100100028 /* MainWindowController.h */,
+				A1000001001A00010012 /* MainWindowController.m */,
+				A100000100100029 /* RuleTableViewController.h */,
+				A1000001001A00010014 /* RuleTableViewController.m */,
+				A100000100100030 /* AddRuleViewController.h */,
+				A1000001001A00010016 /* AddRuleViewController.m */,
+				A1000001001A00010018 /* Main.storyboard */,
+				A100000100100020 /* AddRuleViewController.xib */,
+				A1000001001A00010099 /* Assets.xcassets */,
+				A100000100100031 /* Info.plist */,
+				A100000100100032 /* Metric.entitlements */,
+			);
+			path = Metric;
+			sourceTree = "<group>";
+		};
+		AB00000B00BB000B0003 /* MetricExtension */ = {
+			isa = PBXGroup;
+			children = (
+				A2000002002A00020002 /* main.m */,
+				A200000200200035 /* TransparentProxyProvider.h */,
+				A2000002002A00020004 /* TransparentProxyProvider.m */,
+				A200000200200036 /* FlowHandler.h */,
+				A2000002002A00020006 /* FlowHandler.m */,
+				A200000200200037 /* RuleEngine.h */,
+				A2000002002A00020008 /* RuleEngine.m */,
+				A200000200200038 /* Info.plist */,
+				A200000200200039 /* MetricExtension.entitlements */,
+			);
+			path = MetricExtension;
+			sourceTree = "<group>";
+		};
+		AB00000B00BB000B0004 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				A100000100100034 /* SharedConstants.h */,
+				A100000100100033 /* RuleModel.h */,
+				A1000001001A00010022 /* RuleModel.m */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		AB00000B00BB000B0005 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3000003003A00030002 /* Cocoa.framework */,
+				A3000003003A00030004 /* NetworkExtension.framework */,
+				A3000003003A00030006 /* SystemConfiguration.framework */,
+				A3000003003A00030008 /* SystemExtensions.framework */,
+				A300000300300011 /* Network.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB00000B00BB000B0006 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A9000009009A00090001 /* Metric.app */,
+				A5000005005A00050001 /* nz.owo.Metric.MetricExtension.systemextension */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A5000005005A00050002 /* MetricExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD00000D00DD000D0002 /* Build configuration list for PBXNativeTarget "MetricExtension" */;
+			buildPhases = (
+				A5000005005A00050003 /* Sources */,
+				AA00000A00AA000A0002 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MetricExtension;
+			productName = MetricExtension;
+			productReference = A5000005005A00050001 /* nz.owo.Metric.MetricExtension.systemextension */;
+			productType = "com.apple.product-type.system-extension";
+		};
+		AC00000C00CC000C0001 /* Metric */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD00000D00DD000D0001 /* Build configuration list for PBXNativeTarget "Metric" */;
+			buildPhases = (
+				AC00000C00CC000C0002 /* Sources */,
+				AA00000A00AA000A0001 /* Frameworks */,
+				AC00000C00CC000C0003 /* Resources */,
+				A8000008008A00080001 /* Embed System Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC00000C00CC000C0004 /* PBXTargetDependency */,
+			);
+			name = Metric;
+			productName = Metric;
+			productReference = A9000009009A00090001 /* Metric.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A7000007007A00070001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					A5000005005A00050002 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					AC00000C00CC000C0001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = AD00000D00DD000D0003 /* Build configuration list for PBXProject "Metric" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AB00000B00BB000B0001;
+			productRefGroup = AB00000B00BB000B0006 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC00000C00CC000C0001 /* Metric */,
+				A5000005005A00050002 /* MetricExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC00000C00CC000C0003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000001001A00010017 /* Main.storyboard in Resources */,
+				A1000001001A00010019 /* AddRuleViewController.xib in Resources */,
+				BF8DF8B62F201B670058FAD5 /* Metric.icon in Resources */,
+				A1000001001A00010100 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A5000005005A00050003 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2000002002A00020001 /* main.m in Sources */,
+				A2000002002A00020003 /* TransparentProxyProvider.m in Sources */,
+				A2000002002A00020005 /* FlowHandler.m in Sources */,
+				A2000002002A00020007 /* RuleEngine.m in Sources */,
+				A2000002002A00020009 /* RuleModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC00000C00CC000C0002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000001001A00010000 /* main.m in Sources */,
+				A1000001001A00010001 /* AppDelegate.m in Sources */,
+				A1000001001A00010003 /* Rule.m in Sources */,
+				A1000001001A00010005 /* RuleManager.m in Sources */,
+				A1000001001A00010007 /* IPAddressHelper.m in Sources */,
+				A1000001001A00010009 /* NetworkInterfaceManager.m in Sources */,
+				A1000001001A00010011 /* MainWindowController.m in Sources */,
+				A1000001001A00010013 /* RuleTableViewController.m in Sources */,
+				A1000001001A00010015 /* AddRuleViewController.m in Sources */,
+				A1000001001A00010021 /* RuleModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC00000C00CC000C0004 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5000005005A00050002 /* MetricExtension */;
+			targetProxy = A6000006006A00060001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AE00000E00EE000E0001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = ZDY6H3JN3N;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+			};
+			name = Debug;
+		};
+		AE00000E00EE000E0002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = ZDY6H3JN3N;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+			};
+			name = Release;
+		};
+		AE00000E00EE000E0003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = Metric;
+				CODE_SIGN_ENTITLEMENTS = Metric/Metric.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Shared",
+				);
+				INFOPLIST_FILE = Metric/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 OwO Network, LLC. All rights reserved.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nz.owo.Metric;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+			};
+			name = Debug;
+		};
+		AE00000E00EE000E0004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = Metric;
+				CODE_SIGN_ENTITLEMENTS = Metric/Metric.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Shared",
+				);
+				INFOPLIST_FILE = Metric/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 OwO Network, LLC. All rights reserved.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nz.owo.Metric;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+			};
+			name = Release;
+		};
+		AE00000E00EE000E0005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MetricExtension/MetricExtension.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Shared",
+				);
+				INFOPLIST_FILE = MetricExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nz.owo.Metric.MetricExtension;
+				PRODUCT_NAME = nz.owo.Metric.MetricExtension;
+				REGISTER_APP_GROUPS = YES;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		AE00000E00EE000E0006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MetricExtension/MetricExtension.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Shared",
+				);
+				INFOPLIST_FILE = MetricExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nz.owo.Metric.MetricExtension;
+				PRODUCT_NAME = nz.owo.Metric.MetricExtension;
+				REGISTER_APP_GROUPS = YES;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AD00000D00DD000D0001 /* Build configuration list for PBXNativeTarget "Metric" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE00000E00EE000E0003 /* Debug */,
+				AE00000E00EE000E0004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD00000D00DD000D0002 /* Build configuration list for PBXNativeTarget "MetricExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE00000E00EE000E0005 /* Debug */,
+				AE00000E00EE000E0006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD00000D00DD000D0003 /* Build configuration list for PBXProject "Metric" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE00000E00EE000E0001 /* Debug */,
+				AE00000E00EE000E0002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A7000007007A00070001 /* Project object */;
+}

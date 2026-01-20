@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21701"/>
+    </dependencies>
+    <scenes>
+        <!--Application-->
+        <scene sceneID="JPo-4y-FX3">
+            <objects>
+                <application id="Ady-hI-5gd" sceneMemberID="viewController">
+                    <menu key="mainMenu" title="Main Menu" systemMenu="main" id="main-menu">
+                        <items>
+                            <menuItem title="Metric" id="app-menu-item">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Metric" systemMenu="apple" id="app-menu">
+                                    <items>
+                                        <menuItem title="About Metric" id="about-item">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
+                                        <menuItem title="Install Extension…" id="install-ext-menu">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="installExtensionAction:" target="Voe-Tx-rLC" id="install-ext-action"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Uninstall Extension…" id="uninstall-ext-menu">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="uninstallExtensionAction:" target="Voe-Tx-rLC" id="uninstall-ext-action"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
+                                        <menuItem title="Services" id="NMo-om-nkz">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="4Pd-CT-Lb4"/>
+                                        <menuItem title="Hide Metric" keyEquivalent="h" id="Olw-nP-bQN">
+                                            <connections>
+                                                <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Hide Others" keyEquivalent="h" id="Vdr-fp-XzO">
+                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="hideOtherApplications:" target="Ady-hI-5gd" id="VT4-aY-XCT"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Show All" id="Kd2-mp-pUS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="unhideAllApplications:" target="Ady-hI-5gd" id="Dhg-Le-xox"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
+                                        <menuItem title="Quit Metric" keyEquivalent="q" id="quit-item">
+                                            <connections>
+                                                <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Edit" id="edit-menu-item">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Edit" id="edit-menu">
+                                    <items>
+                                        <menuItem title="Undo" keyEquivalent="z" id="undo-item">
+                                            <connections>
+                                                <action selector="undo:" target="Ady-hI-5gd" id="undo-action"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Redo" keyEquivalent="Z" id="redo-item">
+                                            <connections>
+                                                <action selector="redo:" target="Ady-hI-5gd" id="redo-action"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="sep-edit-1"/>
+                                        <menuItem title="Cut" keyEquivalent="x" id="cut-item">
+                                            <connections>
+                                                <action selector="cut:" target="Ady-hI-5gd" id="cut-action"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Copy" keyEquivalent="c" id="copy-item">
+                                            <connections>
+                                                <action selector="copy:" target="Ady-hI-5gd" id="copy-action"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Paste" keyEquivalent="v" id="paste-item">
+                                            <connections>
+                                                <action selector="paste:" target="Ady-hI-5gd" id="paste-action"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Select All" keyEquivalent="a" id="selectall-item">
+                                            <connections>
+                                                <action selector="selectAll:" target="Ady-hI-5gd" id="selectall-action"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Window" id="window-menu-item">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Window" systemMenu="window" id="window-menu">
+                                    <items>
+                                        <menuItem title="Minimize" keyEquivalent="m" id="minimize-item">
+                                            <connections>
+                                                <action selector="performMiniaturize:" target="Ady-hI-5gd" id="minimize-action"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Zoom" id="zoom-item">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="performZoom:" target="Ady-hI-5gd" id="zoom-action"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="sep-window-1"/>
+                                        <menuItem title="Bring All to Front" id="bring-front-item">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="arrangeInFront:" target="Ady-hI-5gd" id="bring-front-action"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Help" id="help-menu-item">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Help" systemMenu="help" id="help-menu">
+                                    <items>
+                                        <menuItem title="Metric Help" keyEquivalent="?" id="help-item">
+                                            <connections>
+                                                <action selector="showHelp:" target="Ady-hI-5gd" id="help-action"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="delegate" destination="Voe-Tx-rLC" id="delegate-connection"/>
+                    </connections>
+                </application>
+                <customObject id="Voe-Tx-rLC" userLabel="App Delegate" customClass="AppDelegate"/>
+                <customObject id="app-first-responder" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-75" y="0"/>
+        </scene>
+        <!--Main Window Controller-->
+        <scene sceneID="main-window-scene">
+            <objects>
+                <windowController storyboardIdentifier="MainWindowController" id="B8D-0N-5wS" sceneMemberID="viewController">
+                    <window key="window" title="Metric" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" titlebarAppearsTransparent="YES" id="IQv-IB-iLA" userLabel="Main Window" customClass="NSWindow">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="520" height="420"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1080"/>
+                    </window>
+                    <connections>
+                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq5-co-n5S"/>
+                    </connections>
+                </windowController>
+                <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-75" y="277"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="main-view-scene">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="XfG-lQ-9wD" customClass="MainWindowController" sceneMemberID="viewController">
+                    <view key="view" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="520" height="420"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <!-- Header Section with Proxy Switch -->
+                            <box boxType="custom" cornerRadius="10" id="header-box">
+                                <rect key="frame" x="20" y="348" width="480" height="52"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <view key="contentView" id="header-content">
+                                    <rect key="frame" x="1" y="1" width="478" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <switch state="on" id="proxy-switch">
+                                            <rect key="frame" x="16" y="13" width="38" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                            <connections>
+                                                <action selector="proxySwitchChanged:" target="XfG-lQ-9wD" id="proxy-switch-action"/>
+                                            </connections>
+                                        </switch>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="proxy-label">
+                                            <rect key="frame" x="62" y="26" width="100" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="Proxy" id="proxy-label-cell">
+                                                <font key="font" metaFont="systemSemibold" size="13"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="extension-status-label">
+                                            <rect key="frame" x="62" y="8" width="200" height="14"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="Extension: Not Installed" id="extension-status-label-cell">
+                                                <font key="font" metaFont="system" size="11"/>
+                                                <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="status-label">
+                                            <rect key="frame" x="280" y="17" width="180" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Disconnected" id="status-label-cell">
+                                                <font key="font" metaFont="system" size="13"/>
+                                                <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </subviews>
+                                </view>
+                                <color key="fillColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <color key="borderColor" name="separatorColor" catalog="System" colorSpace="catalog"/>
+                            </box>
+                            
+                            <!-- Network Interfaces Section -->
+                            <box boxType="custom" cornerRadius="10" id="interfaces-box">
+                                <rect key="frame" x="20" y="268" width="480" height="70"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <view key="contentView" id="interfaces-content">
+                                    <rect key="frame" x="1" y="1" width="478" height="68"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="interfaces-title">
+                                            <rect key="frame" x="16" y="42" width="150" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="Network Interfaces" id="interfaces-title-cell">
+                                                <font key="font" metaFont="systemSemibold" size="11"/>
+                                                <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="ethernet-label">
+                                            <rect key="frame" x="16" y="22" width="446" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" title="Loading..." id="ethernet-label-cell">
+                                                <font key="font" metaFont="system" size="12"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="wifi-label">
+                                            <rect key="frame" x="16" y="4" width="446" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" title="" id="wifi-label-cell">
+                                                <font key="font" metaFont="system" size="12"/>
+                                                <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </subviews>
+                                </view>
+                                <color key="fillColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <color key="borderColor" name="separatorColor" catalog="System" colorSpace="catalog"/>
+                            </box>
+                            
+                            <!-- Rules Section -->
+                            <box boxType="custom" cornerRadius="10" id="rules-box">
+                                <rect key="frame" x="20" y="20" width="480" height="238"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <view key="contentView" id="rules-content">
+                                    <rect key="frame" x="1" y="1" width="478" height="236"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="rules-title">
+                                            <rect key="frame" x="16" y="210" width="100" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="Routing Rules" id="rules-title-cell">
+                                                <font key="font" metaFont="systemSemibold" size="11"/>
+                                                <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" id="add-button">
+                                            <rect key="frame" x="380" y="204" width="40" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="roundRect" title="+" bezelStyle="roundedRect" alignment="center" imageScaling="proportionallyDown" inset="2" id="add-button-cell">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="addRule:" target="XfG-lQ-9wD" id="add-rule-action"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" id="remove-button">
+                                            <rect key="frame" x="424" y="204" width="40" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="roundRect" title="−" bezelStyle="roundedRect" alignment="center" imageScaling="proportionallyDown" inset="2" id="remove-button-cell">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="removeRule:" target="XfG-lQ-9wD" id="remove-rule-action"/>
+                                            </connections>
+                                        </button>
+                                        <!-- Table View -->
+                                        <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" hasHorizontalScroller="NO" borderType="none" id="rules-scroll-view">
+                                            <rect key="frame" x="8" y="8" width="462" height="190"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <clipView key="contentView" drawsBackground="NO" id="rules-clip-view">
+                                                <rect key="frame" x="0" y="0" width="462" height="190"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="regular" columnReordering="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" rowSizeStyle="custom" viewBased="YES" id="rules-table-view">
+                                                        <rect key="frame" x="0.0" y="0.0" width="462" height="190"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <tableColumns>
+                                                            <tableColumn identifier="enabled" width="32" minWidth="32" maxWidth="32" id="enabled-column">
+                                                                <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="">
+                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                    <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                                </tableHeaderCell>
+                                                                <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" title="" id="enabled-data-cell">
+                                                                    <font key="font" metaFont="system"/>
+                                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                            </tableColumn>
+                                                            <tableColumn identifier="pattern" width="180" minWidth="100" maxWidth="400" id="pattern-column">
+                                                                <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="CIDR Pattern">
+                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                    <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                                </tableHeaderCell>
+                                                                <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="" id="pattern-data-cell">
+                                                                    <font key="font" metaFont="system"/>
+                                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                            </tableColumn>
+                                                            <tableColumn identifier="interface" width="100" minWidth="60" maxWidth="150" id="interface-column">
+                                                                <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Interface">
+                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                    <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                                </tableHeaderCell>
+                                                                <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="" id="interface-data-cell">
+                                                                    <font key="font" metaFont="system"/>
+                                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                            </tableColumn>
+                                                            <tableColumn identifier="comment" width="130" minWidth="80" maxWidth="500" id="comment-column">
+                                                                <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Comment">
+                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                    <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                                </tableHeaderCell>
+                                                                <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="" id="comment-data-cell">
+                                                                    <font key="font" metaFont="system"/>
+                                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                            </tableColumn>
+                                                        </tableColumns>
+                                                    </tableView>
+                                                </subviews>
+                                            </clipView>
+                                            <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="h-scroller">
+                                                <rect key="frame" x="-100" y="-100" width="223" height="16"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </scroller>
+                                            <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="v-scroller">
+                                                <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </scroller>
+                                        </scrollView>
+                                    </subviews>
+                                </view>
+                                <color key="fillColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <color key="borderColor" name="separatorColor" catalog="System" colorSpace="catalog"/>
+                            </box>
+                        </subviews>
+                        <color key="backgroundColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="add-button" id="add-button-outlet"/>
+                        <outlet property="ethernetLabel" destination="ethernet-label" id="ethernet-label-outlet"/>
+                        <outlet property="extensionStatusLabel" destination="extension-status-label" id="extension-status-outlet"/>
+                        <outlet property="proxySwitch" destination="proxy-switch" id="proxy-switch-outlet"/>
+                        <outlet property="removeButton" destination="remove-button" id="remove-button-outlet"/>
+                        <outlet property="rulesTableView" destination="rules-table-view" id="rules-table-outlet"/>
+                        <outlet property="statusLabel" destination="status-label" id="status-label-outlet"/>
+                        <outlet property="wifiLabel" destination="wifi-label" id="wifi-label-outlet"/>
+                    </connections>
+                </viewController>
+                <customObject id="main-first-responder" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="403" y="277"/>
+        </scene>
+    </scenes>
+</document>

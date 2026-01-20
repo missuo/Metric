@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="NO">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21701"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="AddRuleViewController">
+            <connections>
+                <outlet property="commentField" destination="comment-field" id="comment-outlet"/>
+                <outlet property="errorLabel" destination="error-label" id="error-outlet"/>
+                <outlet property="interfacePopUp" destination="interface-popup" id="interface-outlet"/>
+                <outlet property="patternField" destination="pattern-field" id="pattern-outlet"/>
+                <outlet property="saveButton" destination="save-btn" id="save-outlet"/>
+                <outlet property="titleLabel" destination="title-label" id="title-outlet"/>
+                <outlet property="typePopUp" destination="type-popup" id="type-outlet"/>
+                <outlet property="view" destination="main-view" id="view-outlet"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="main-view">
+            <rect key="frame" x="0.0" y="0.0" width="380" height="220"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <!-- Title -->
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="title-label">
+                    <rect key="frame" x="20" y="184" width="340" height="20"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Add Rule" id="title-label-cell">
+                        <font key="font" metaFont="systemSemibold" size="16"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                
+                <!-- Hidden Type popup (for compatibility) -->
+                <popUpButton hidden="YES" id="type-popup">
+                    <rect key="frame" x="0" y="0" width="1" height="1"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" id="type-popup-cell">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                        <menu key="menu" id="type-menu">
+                            <items>
+                                <menuItem title="CIDR" id="cidr-item"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                </popUpButton>
+                
+                <!-- CIDR Pattern Row -->
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="pattern-label">
+                    <rect key="frame" x="20" y="148" width="80" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="CIDR:" id="pattern-label-cell">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" id="pattern-field">
+                    <rect key="frame" x="105" y="144" width="255" height="24"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" placeholderString="e.g. 192.168.1.0/24 or 10.0.0.1" id="pattern-field-cell">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                
+                <!-- Interface Row -->
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="interface-label">
+                    <rect key="frame" x="20" y="112" width="80" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Interface:" id="interface-label-cell">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <popUpButton verticalHuggingPriority="750" id="interface-popup">
+                    <rect key="frame" x="102" y="106" width="258" height="26"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <popUpButtonCell key="cell" type="push" title="Select Interface" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="interface-popup-cell">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                        <menu key="menu" id="interface-menu">
+                            <items>
+                                <menuItem title="Select Interface" id="default-interface-item"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <action selector="interfaceChanged:" target="-2" id="interface-action"/>
+                    </connections>
+                </popUpButton>
+                
+                <!-- Comment Row -->
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="comment-label">
+                    <rect key="frame" x="20" y="78" width="80" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Comment:" id="comment-label-cell">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" id="comment-field">
+                    <rect key="frame" x="105" y="74" width="255" height="24"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" placeholderString="Optional description" id="comment-field-cell">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                
+                <!-- Error Label -->
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="error-label">
+                    <rect key="frame" x="20" y="50" width="340" height="16"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="" id="error-label-cell">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                
+                <!-- Buttons -->
+                <button verticalHuggingPriority="750" id="cancel-btn">
+                    <rect key="frame" x="180" y="14" width="90" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cancel-btn-cell">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                        <string key="keyEquivalent" base64-UTF8="YES">Gw</string>
+                    </buttonCell>
+                    <connections>
+                        <action selector="cancel:" target="-2" id="cancel-action"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" id="save-btn">
+                    <rect key="frame" x="275" y="14" width="90" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <buttonCell key="cell" type="push" title="Add" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="save-btn-cell">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                        <string key="keyEquivalent" base64-UTF8="YES">DQ</string>
+                    </buttonCell>
+                    <connections>
+                        <action selector="save:" target="-2" id="save-action"/>
+                    </connections>
+                </button>
+            </subviews>
+        </customView>
+    </objects>
+</document>
