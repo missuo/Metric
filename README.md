@@ -26,7 +26,7 @@ A macOS network routing manager that allows you to route traffic through specifi
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/user/Metric.git
+   git clone https://github.com/missuo/Metric.git
    cd Metric
    ```
 
